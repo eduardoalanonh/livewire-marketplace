@@ -148,13 +148,13 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Marketplace_aurora\app\Http\Livewire\Admin" />
-      <recent name="C:\xampp\htdocs\Marketplace_aurora\resources\views\livewire\admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Marketplace_aurora\app\View\Components" />
       <recent name="C:\xampp\htdocs\Marketplace_aurora\resources\views\layouts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Marketplace_aurora\app\Http\Livewire\Admin" />
+      <recent name="C:\xampp\htdocs\Marketplace_aurora\resources\views\livewire\admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -183,6 +183,7 @@
       <workItem from="1603251316256" duration="6032000" />
       <workItem from="1603423435575" duration="1595000" />
       <workItem from="1603545559559" duration="5926000" />
+      <workItem from="1603673191467" duration="4628000" />
     </task>
     <servers />
   </component>

@@ -22,6 +22,7 @@ Route::get('/',\App\Http\Livewire\Home::class);
 Route::get('/product',\App\Http\Livewire\Admin\AdminProduct::class)->name('admin.product');
 
 Route::get('/admin', \App\Http\Livewire\Admin\AdminHome::class)->name('admin.home');
+Route::get('/profile', \App\Http\Livewire\Admin\Profile::class)->name('admin.profile');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
