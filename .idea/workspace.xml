@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3dada9e8-2b15-4f83-b83e-14fa5ae4c6eb" name="Default Changelist" comment="" />
+    <list default="true" id="3dada9e8-2b15-4f83-b83e-14fa5ae4c6eb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminNav.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminNav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Admin/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/Profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/UserAddress.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserAddress.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_17_182003_create_user_addresses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_17_182003_create_user_addresses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/admin-nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/profile.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +21,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -142,19 +156,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/View/Components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Marketplace_aurora\storage\app\public" />
+      <recent name="C:\xampp\htdocs\Marketplace_aurora\app\Http\Livewire\Admin" />
+      <recent name="C:\xampp\htdocs\Marketplace_aurora\resources\views\livewire\admin" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Marketplace_aurora\app\View\Components" />
       <recent name="C:\xampp\htdocs\Marketplace_aurora\resources\views\layouts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Marketplace_aurora\app\Http\Livewire\Admin" />
-      <recent name="C:\xampp\htdocs\Marketplace_aurora\resources\views\livewire\admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -184,6 +199,8 @@
       <workItem from="1603423435575" duration="1595000" />
       <workItem from="1603545559559" duration="5926000" />
       <workItem from="1603673191467" duration="4628000" />
+      <workItem from="1603750629716" duration="9921000" />
+      <workItem from="1603765050889" duration="2713000" />
     </task>
     <servers />
   </component>
@@ -199,10 +216,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="259" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/1920.2.1920.1040@0.0.1920.1040" timestamp="1603162790231" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602900289931">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603760836486">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.2.1920.1040@0.0.1920.1040" timestamp="1602900289931" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.2.1920.1040@0.0.1920.1040" timestamp="1603760836486" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1603759614414">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.2.1920.1040@0.0.1920.1040" timestamp="1603759614414" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1603233795868">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

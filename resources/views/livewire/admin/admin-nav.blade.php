@@ -48,8 +48,13 @@
             </ul>
 
             <div class="flex items-start mb-4 text-sm mr-2">
-                <img src="https://pbs.twimg.com/profile_images/875010472105222144/Pkt9zqPY_400x400.jpg"
+                @if(!auth()->user()->profile_photo_path)
+                <img src="{{asset('storage/no-avatar.png')}}"
                      class="w-10 h-10 rounded mr-3">
+                @else
+                    <img src="{{asset('storage/' . auth()->user()->profile_photo_path)}}"
+                         class="w-10 h-10 rounded mr-3">
+                @endif
                 <div class="flex-1 overflow-hidden">
                     <div class="pt-4">
                         <a href="{{route('admin.profile')}}">Perfil</a>

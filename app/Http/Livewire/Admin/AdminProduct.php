@@ -63,7 +63,6 @@ class AdminProduct extends Component
         $this->name = $this->description = $this->price = $this->photo = '';
 
         $this->emit('productAdded');
-
     }
 
 }
