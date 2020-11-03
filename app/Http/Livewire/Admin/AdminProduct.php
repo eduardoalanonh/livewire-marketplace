@@ -15,12 +15,14 @@ class AdminProduct extends Component
     public $name;
     public $description;
     public $price;
+    public $unique_product;
     public $photo;
 
     protected $rules = [
         'name' => 'required',
         'description' => 'required|min:10',
-        'price' => 'required'
+        'price' => 'required',
+        'photo' => 'required'
     ];
 
 
@@ -46,19 +48,21 @@ class AdminProduct extends Component
 
         //creat product
         $product = Product::create([
-            'user_id' => 1,
+            'user_id' => auth()->user()->id,
             'name' => $this->name,
             'description' => $this->description,
+            'unique_product' => $this->unique_product ?? 0,
             'price' => $this->price
         ]);
 
-        $imagePath = $this->photo->store('public/photos');
-
-        //creat product image
-        ProductPhoto::create([
-            'product_id' => $product->id,
-            'image' => $imagePath
-        ]);
+        if ($this->photo) {
+            $imagePath = $this->photo->store('public/photos');
+            //creat product image
+            ProductPhoto::create([
+                'product_id' => $product->id,
+                'image' => $imagePath
+            ]);
+        }
 
         $this->name = $this->description = $this->price = $this->photo = '';
 

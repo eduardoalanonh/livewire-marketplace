@@ -19,18 +19,12 @@ class AdminProductsShow extends Component
     public function render()
     {
         return view('livewire.admin.admin-products-show', [
-            'products' => Product::orderBy('id', 'desc')->paginate(6),
+            'products' =>  auth()->user()->products()->orderBy('id', 'desc')->paginate(6),
         ]);
     }
 
     public function destroyProduct(int $id)
     {
-        $image = ProductPhoto::where('product_id', $id);
-
-        if ($image->exists()) {
-            $image->delete();
-        }
-
         Product::destroy($id);
     }
 

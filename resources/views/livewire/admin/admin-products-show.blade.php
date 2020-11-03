@@ -58,12 +58,12 @@
                                         </p>
                                     </td>
                                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <button
+                                        <a href="{{route('admin.product.edit',['id' => $product->id])}}"
                                             class="relative inline-block px-3 py-1 font-semibold text-black leading-tight">
                                         <span aria-hidden
                                               class="absolute inset-0 bg-blue-300 opacity-50 rounded-full"></span>
                                             <span class="relative">Editar</span>
-                                        </button>
+                                        </a>
                                     </td>
                                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                         <button wire:click="destroyProduct({{$product->id}})"

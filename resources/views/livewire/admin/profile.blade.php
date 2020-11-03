@@ -11,8 +11,9 @@
                         @else
                             <img src="{{asset('storage/' . auth()->user()->profile_photo_path)}}"
                                  class="w-10 h-10 rounded mr-3">
+                        @endif
                             Perfil </h2>
-                    @endif
+
                     <form class="mt-6 border-t border-gray-400 pt-4" wire:submit.prevent="updateProfile">
                         <div class='w-full md:w-full px-3 mb-6'>
                             <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -33,12 +34,21 @@
                         </div>
                         <div class='w-full md:w-full px-3 mb-6'>
                             <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
-                                Endereco</label>
+                                Bloco</label>
                             <input
-                                wire:model="address"
+                                wire:model="block"
                                 class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500'
                                 type='text'>
-                            @error('endereco') <span class="error">{{ $message }}</span> @enderror
+                            @error('block') <span class="error">{{ $message }}</span> @enderror
+                        </div>
+                        <div class='w-full md:w-full px-3 mb-6'>
+                            <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
+                                Apartamento</label>
+                            <input
+                                wire:model="apartment"
+                                class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500'
+                                type='text'>
+                            @error('apartmen') <span class="error">{{ $message }}</span> @enderror
                         </div>
                         <div class='w-full md:w-full px-3 mb-6'>
                             <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -74,10 +84,6 @@
                             <button
                                 class="appearance-none bg-gray-200 text-gray-900 px-2 py-1 shadow-sm border border-gray-400 rounded-md mr-3 hover:bg-white"
                                 type="submit">Atualizar perfil
-                            </button>
-                            <button
-                                class="appearance-none bg-gray-200 text-gray-900 px-2 py-1 shadow-sm border border-gray-400 rounded-md mr-3 hover:bg-white"
-                            >Deseja trocar de senha?
                             </button>
                         </div>
                     </form>

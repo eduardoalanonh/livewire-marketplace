@@ -6,15 +6,22 @@
 
         @if(count($products))
             @foreach($products as $product)
-                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col border-black border-opacity-25">
-                    <a href="#">
-                        <img class="hover:grow hover:shadow-lg border-black border-opacity-25"
-                             src="{{asset('storage/' . str_replace('public','',$product->photo[0]['image']))}}">
-                        <div class="pt-3 flex items-center justify-between">
-                            <p class="font-black hover:font-hairline">{{$product->name}}</p>
+                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col border-black border-opacity-25 items-center">
+                    <div
+                        style="background-image: url({{asset('storage/' . str_replace('public','',$product->photo[0]['image']))}}"
+                        class="bg-gray-300 h-64 w-full rounded-lg shadow-md bg-cover bg-center" loading="lazy"></div>
+                    <div
+                        class="w-56 md:w-64 bg-white -mt-10 shadow-lg rounded-lg overflow-hidden hover:grow hover:shadow-lg border-black border-opacity-25">
+                        <div
+                            class="py-2 text-center font-bold uppercase tracking-wide text-gray-800 bg-gray-100">{{$product->name}}</div>
+                        <div class="flex items-center justify-between py-2 px-3 bg-gray-400">
+                            <h1 class="text-gray-800 font-bold ">R$ {{$product->price}}</h1>
+                            <a href="{{route('single.product',['id' => $product->id])}}"
+                                class=" bg-gray-800 text-xs text-white px-2 py-1 font-semibold rounded uppercase hover:bg-gray-700">
+                                Comprar
+                            </a>
                         </div>
-                        <p class="pt-1 text-gray-900">R$ {{$product->price}}</p>
-                    </a>
+                    </div>
                 </div>
             @endforeach
         @else

@@ -19341,12 +19341,6 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 /*Toggle dropdown list*/
 
@@ -19404,140 +19398,46 @@ function checkParent(t, elm) {
   }
 
   return false;
+} //JS to switch slides and replace text in bar//
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-var fileTempl = document.getElementById("file-template"),
-    imageTempl = document.getElementById("image-template"),
-    empty = document.getElementById("empty"); // use to store pre selected files
-
-var FILES = {}; // check if file is of type image and prepend the initialied
-// template to the target element
-
-function addFile(target, file) {
-  var isImage = file.type.match("image.*"),
-      objectURL = URL.createObjectURL(file);
-  var clone = isImage ? imageTempl.content.cloneNode(true) : fileTempl.content.cloneNode(true);
-  clone.querySelector("h1").textContent = file.name;
-  clone.querySelector("li").id = objectURL;
-  clone.querySelector(".delete").dataset.target = objectURL;
-  clone.querySelector(".size").textContent = file.size > 1024 ? file.size > 1048576 ? Math.round(file.size / 1048576) + "mb" : Math.round(file.size / 1024) + "kb" : file.size + "b";
-  isImage && Object.assign(clone.querySelector("img"), {
-    src: objectURL,
-    alt: file.name
-  });
-  empty.classList.add("hidden");
-  target.prepend(clone);
-  FILES[objectURL] = file;
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-var gallery = document.getElementById("gallery"),
-    overlay = document.getElementById("overlay"); // click the hidden input of type file if the visible button is clicked
-// and capture the selected files
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("description");
+  var captionText = document.getElementById("caption");
 
-var hidden = document.getElementById("hidden-input");
-
-document.getElementById("button").onclick = function () {
-  return hidden.click();
-};
-
-hidden.onchange = function (e) {
-  var _iterator = _createForOfIteratorHelper(e.target.files),
-      _step;
-
-  try {
-    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      var file = _step.value;
-      addFile(gallery, file);
-    }
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
-  }
-}; // use to check if a file is being dragged
-
-
-var hasFiles = function hasFiles(_ref) {
-  var _ref$dataTransfer$typ = _ref.dataTransfer.types,
-      types = _ref$dataTransfer$typ === void 0 ? [] : _ref$dataTransfer$typ;
-  return types.indexOf("Files") > -1;
-}; // use to drag dragenter and dragleave events.
-// this is to know if the outermost parent is dragged over
-// without issues due to drag events on its children
-
-
-var counter = 0; // reset counter and append file to gallery when file is dropped
-
-function dropHandler(ev) {
-  ev.preventDefault();
-
-  var _iterator2 = _createForOfIteratorHelper(ev.dataTransfer.files),
-      _step2;
-
-  try {
-    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-      var file = _step2.value;
-      addFile(gallery, file);
-      overlay.classList.remove("draggedover");
-      counter = 0;
-    }
-  } catch (err) {
-    _iterator2.e(err);
-  } finally {
-    _iterator2.f();
-  }
-} // only react to actual files being dragged
-
-
-function dragEnterHandler(e) {
-  e.preventDefault();
-
-  if (!hasFiles(e)) {
-    return;
+  if (n > slides.length) {
+    slideIndex = 1;
   }
 
-  ++counter && overlay.classList.add("draggedover");
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" opacity-100", "");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " opacity-100";
+  captionText.innerHTML = dots[slideIndex - 1].alt;
 }
-
-function dragLeaveHandler(e) {
-  1 > --counter && overlay.classList.remove("draggedover");
-}
-
-function dragOverHandler(e) {
-  if (hasFiles(e)) {
-    e.preventDefault();
-  }
-} // event delegation to caputre delete events
-// fron the waste buckets in the file preview cards
-
-
-gallery.onclick = function (_ref2) {
-  var target = _ref2.target;
-
-  if (target.classList.contains("delete")) {
-    var ou = target.dataset.target;
-    document.getElementById(ou).remove(ou);
-    gallery.children.length === 1 && empty.classList.remove("hidden");
-    delete FILES[ou];
-  }
-}; // print all selected files
-
-
-document.getElementById("submit").onclick = function () {
-  alert("Submitted Files:\n".concat(JSON.stringify(FILES)));
-  console.log(FILES);
-}; // clear entire selection
-
-
-document.getElementById("cancel").onclick = function () {
-  while (gallery.children.length > 0) {
-    gallery.lastChild.remove();
-  }
-
-  FILES = {};
-  empty.classList.remove("hidden");
-  gallery.append(empty);
-};
 
 /***/ }),
 

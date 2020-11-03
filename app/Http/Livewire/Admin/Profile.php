@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Admin;
 
 
+use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -13,7 +14,8 @@ class Profile extends Component
     public $user;
     public $email;
     public $password;
-    public $address;
+    public $block;
+    public $apartment;
     public $phone;
     public $name;
     public $photo;
@@ -38,13 +40,13 @@ class Profile extends Component
     {
         $this->name = auth()->user()->name;
         $this->email = auth()->user()->email;
-        $this->address = auth()->user()->address->block_and_number ?? '';
+        $this->block = auth()->user()->address->block ?? '';
+        $this->apartment = auth()->user()->address->apartment ?? '';
         $this->phone = auth()->user()->address->phone ?? '';
     }
 
     public function updateProfile()
     {
-
         if ($this->photo) {
             $imagePath = $this->photo->store('public');
             $this->imagePath = str_replace('public/', '', $imagePath);
@@ -61,13 +63,15 @@ class Profile extends Component
         if (auth()->user()->address) {
             auth()->user()->address->update([
                 'user_id' => auth()->user()->id,
-                'block_and_number' => $this->address,
+                'block' => $this->block,
+                'apartment' => $this->apartment,
                 'phone' => $this->phone
             ]);
         } else {
             auth()->user()->address()->create([
                 'user_id' => auth()->user()->id,
-                'block_and_number' => $this->address,
+                'block' => $this->block,
+                'apartment' => $this->apartment,
                 'phone' => $this->phone
             ]);
         }

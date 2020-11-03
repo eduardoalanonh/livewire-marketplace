@@ -13,17 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.app');
+
+Route::get('/',\App\Http\Livewire\Home::class)->name('home');
+Route::get('/products/{id}',\App\Http\Livewire\Product::class)->name('single.product');
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/product', \App\Http\Livewire\Admin\AdminProduct::class)->name('admin.product');
+    Route::get('/admin', \App\Http\Livewire\Admin\AdminHome::class)->name('admin.home');
+    Route::get('/profile', \App\Http\Livewire\Admin\Profile::class)->name('admin.profile');
+    Route::get('/product/{id}', \App\Http\Livewire\Admin\AdminProductEdit::class)->name('admin.product.edit');
 });
-
-Route::get('/',\App\Http\Livewire\Home::class);
-
-Route::get('/product',\App\Http\Livewire\Admin\AdminProduct::class)->name('admin.product');
-
-Route::get('/admin', \App\Http\Livewire\Admin\AdminHome::class)->name('admin.home');
-Route::get('/profile', \App\Http\Livewire\Admin\Profile::class)->name('admin.profile');
-
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
