@@ -22,7 +22,7 @@
 
         <div class="order-1 md:order-2">
             <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
-               href="{{route('home')}}">
+               href="{{route('home')}}" data-turbolinks="true">
                 <svg class="fill-current text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                      viewBox="0 0 24 24">
                     <path
@@ -33,7 +33,7 @@
         </div>
 
         <div class="order-2 md:order-3 flex items-center" id="nav-content">
-            <a class="inline-block no-underline hover:text-black" href="{{route('admin.home')}}">
+            <a class="inline-block no-underline hover:text-black" href="{{route('admin.home')}}" data-turbolinks="true">
                 <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                      viewBox="0 0 24 24">
                     <circle fill="none" cx="12" cy="7" r="3"/>

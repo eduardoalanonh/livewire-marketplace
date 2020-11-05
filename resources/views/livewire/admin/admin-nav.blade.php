@@ -49,10 +49,10 @@
 
             <div class="flex items-start mb-4 text-sm mr-2">
                 @if(!auth()->user()->profile_photo_path)
-                <img src="{{asset('storage/no-avatar.png')}}"
+                <img src="{{$noAvatar}}"
                      class="w-10 h-10 rounded mr-3">
                 @else
-                    <img src="{{asset('storage/' . auth()->user()->profile_photo_path)}}"
+                    <img src="{{$s3Photo . auth()->user()->profile_photo_path}}"
                          class="w-10 h-10 rounded mr-3">
                 @endif
                 <div class="flex-1 overflow-hidden">

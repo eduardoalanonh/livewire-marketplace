@@ -10,6 +10,8 @@ class Home extends Component
 {
     use WithPagination;
 
+    public $s3Photo = 'https://auroramarketplace.s3-sa-east-1.amazonaws.com/';
+
 
     public $search = '';
 

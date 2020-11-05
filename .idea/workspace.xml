@@ -2,23 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dada9e8-2b15-4f83-b83e-14fa5ae4c6eb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Marketplace_aurora.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Marketplace_aurora.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminNav.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminNav.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminProductEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminProductEdit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminProductsShow.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminProductsShow.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Admin/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/Profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ProductPhoto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProductPhoto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserAddress.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserAddress.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_17_182003_create_user_addresses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_17_182003_create_user_addresses_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_17_182102_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_17_182102_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_21_033959_create_product_photos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_21_033959_create_product_photos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/livewire.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/livewire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/admin-nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/admin-product-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-product-edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/admin-product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-product.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/admin-products-show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-products-show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/product.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,6 +158,10 @@
       <path value="$PROJECT_DIR$/vendor/paragonie/constant_time_encoding" />
       <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
       <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
+      <path value="$PROJECT_DIR$/vendor/jantinnerezo/livewire-alert" />
+      <path value="$PROJECT_DIR$/vendor/aws/aws-sdk-php" />
+      <path value="$PROJECT_DIR$/vendor/mtdowling/jmespath.php" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem-aws-s3-v3" />
     </include_path>
   </component>
   <component name="ProjectId" id="1itYl7OdGojLUFcWEgLtpSxA4Om" />
@@ -212,7 +221,9 @@
       <workItem from="1604023604451" duration="5000" />
       <workItem from="1604026306664" duration="1658000" />
       <workItem from="1604343791456" duration="1668000" />
-      <workItem from="1604353209513" duration="6725000" />
+      <workItem from="1604353209513" duration="7520000" />
+      <workItem from="1604444176969" duration="8035000" />
+      <workItem from="1604534984655" duration="7336000" />
     </task>
     <servers />
   </component>
@@ -232,10 +243,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.2.1920.1040@0.0.1920.1040" timestamp="1603760836486" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1603759614414">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604455520320">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.2.1920.1040@0.0.1920.1040" timestamp="1603759614414" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.2.1920.1040@0.0.1920.1040" timestamp="1604455520320" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1603233795868">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

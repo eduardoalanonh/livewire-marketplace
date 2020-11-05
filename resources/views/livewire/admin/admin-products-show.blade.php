@@ -33,15 +33,14 @@
                         </tr>
                         </thead>
                         <tbody>
-
-                            @foreach($products as $product)
+                        @foreach($products as $product)
                                 <tr>
                                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                         <div class="flex items-center">
                                             <div class="flex-shrink-0 w-10 h-10">
                                                 @foreach($product->photo as $photo)
                                                 <img class="w-full h-full rounded-full"
-                                                     src="{{asset('storage/' . str_replace('public','',$photo->image))}}"
+                                                     src="{{$s3Photo .$photo->image}}"
                                                      alt=""/>
                                                 @endforeach
                                             </div>

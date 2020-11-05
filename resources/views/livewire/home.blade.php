@@ -8,7 +8,7 @@
             @foreach($products as $product)
                 <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col border-black border-opacity-25 items-center">
                     <div
-                        style="background-image: url({{asset('storage/' . str_replace('public','',$product->photo[0]['image']))}}"
+                        style="background-image: url({{$s3Photo . $product->photo[0]['image'] }})"
                         class="bg-gray-300 h-64 w-full rounded-lg shadow-md bg-cover bg-center" loading="lazy"></div>
                     <div
                         class="w-56 md:w-64 bg-white -mt-10 shadow-lg rounded-lg overflow-hidden hover:grow hover:shadow-lg border-black border-opacity-25">

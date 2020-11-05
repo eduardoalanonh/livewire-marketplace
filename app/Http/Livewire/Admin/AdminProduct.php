@@ -55,18 +55,30 @@ class AdminProduct extends Component
             'price' => $this->price
         ]);
 
-        if ($this->photo) {
-            $imagePath = $this->photo->store('public/photos');
-            //creat product image
-            ProductPhoto::create([
-                'product_id' => $product->id,
-                'image' => $imagePath
-            ]);
-        }
+
+        $imagePath = $this->photo->store('photos', 's3');
+
+
+        //creat product image
+        ProductPhoto::create([
+            'product_id' => $product->id,
+            'image' => $imagePath
+        ]);
+
 
         $this->name = $this->description = $this->price = $this->photo = '';
 
+
         $this->emit('productAdded');
+
+        $this->alert('success', 'Sucesso!', [
+            'position' => 'center',
+            'timer' => 5000,
+            'toast' => false,
+            'text' => 'Seu produto foi criado!',
+            'showCancelButton' => false,
+            'showConfirmButton' => false
+        ]);
     }
 
 }

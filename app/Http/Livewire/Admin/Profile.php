@@ -3,7 +3,6 @@
 namespace App\Http\Livewire\Admin;
 
 
-use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -20,6 +19,10 @@ class Profile extends Component
     public $name;
     public $photo;
     public $imagePath = null;
+    public $tempImage = false;
+    public $s3Photo = 'https://auroramarketplace.s3-sa-east-1.amazonaws.com/';
+    public $noAvatar = 'https://auroramarketplace.s3-sa-east-1.amazonaws.com/no-avatar.png';
+
 
     public function render()
     {
@@ -30,6 +33,7 @@ class Profile extends Component
 
     public function updatedPhoto()
     {
+        $this->photo->store('tmp', 's3');
         $this->validate([
             'photo' => 'image|max:1024',
         ]);
@@ -47,9 +51,9 @@ class Profile extends Component
 
     public function updateProfile()
     {
+
         if ($this->photo) {
-            $imagePath = $this->photo->store('public');
-            $this->imagePath = str_replace('public/', '', $imagePath);
+            $this->imagePath = $this->photo->store('avatar', 's3');
         } else {
             $this->imagePath = auth()->user()->profile_photo_path;
         }
@@ -76,8 +80,19 @@ class Profile extends Component
             ]);
         }
 
-        $this->emit('photoAdded');
-    }
+        $this->alert('success', 'Sucesso!', [
+            'position' => 'center',
+            'timer' => 5000,
+            'toast' => false,
+            'text' => 'Seu perfil foi atualizado!',
+            'showCancelButton' => false,
+            'showConfirmButton' => false
+        ]);
 
+        $this->emit('photoAdded');
+
+        $this->tempImage = true;
+
+    }
 
 }

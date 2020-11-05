@@ -35,12 +35,14 @@
                         </div>
                         <div class='w-full md:w-full px-3 mb-6'>
                             <label class="inline-flex items-center mt-3">
-                                <input  wire:model="unique_product" type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" checked><span class="ml-2 text-gray-700">Marque esse campo se vai ser um produto unico</span>
+                                <input wire:model="unique_product" type="checkbox"
+                                       class="form-checkbox h-5 w-5 text-gray-600" checked><span
+                                    class="ml-2 text-gray-700">Marque esse campo se vai ser um produto unico</span>
                             </label>
-
                         </div>
 
-                        <div class='w-full md:w-full px-3 mb-6 grid grid-cols-2'>
+
+                        <div class='w-full md:w-full px-3 mb-6 grid grid-cols-2 mt-5'>
                             <div>
                                 <label
                                     class="w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border  cursor-pointer  hover:text-gray-600">
@@ -53,9 +55,9 @@
                                     <input type='file' class="hidden" wire:model="photo"/>
                                 </label>
                             </div>
-                            <div>
+                            <div class="rounded">
                                 @if ($photo)
-                                    <img src="{{ $photo->temporaryUrl() }}">
+                                    <img src="{{ $photo->temporaryUrl() }}" class="shadow-sm rounded">
                                 @endif
                                 @error('photo') <span class="error">{{ $message }}</span> @enderror
                             </div>

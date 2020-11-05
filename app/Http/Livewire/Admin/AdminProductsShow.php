@@ -3,7 +3,6 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Models\Product;
-use App\Models\ProductPhoto;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -11,6 +10,8 @@ use Livewire\WithPagination;
 class AdminProductsShow extends Component
 {
     use WithPagination;
+
+    public $s3Photo = 'https://auroramarketplace.s3-sa-east-1.amazonaws.com/';
 
     protected $listeners = [
         'productAdded' => '$refresh'

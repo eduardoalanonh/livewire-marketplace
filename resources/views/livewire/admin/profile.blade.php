@@ -6,13 +6,13 @@
                 <div class="inputs w-full max-w-2xl p-6 mx-auto">
                     <h2 class="text-2xl text-gray-900 inline-flex">
                         @if(!auth()->user()->profile_photo_path)
-                            <img src="{{asset('storage/no-avatar.png')}}"
+                            <img src="{{$noAvatar}}"
                                  class="w-10 h-10 rounded mr-3">
                         @else
-                            <img src="{{asset('storage/' . auth()->user()->profile_photo_path)}}"
+                            <img src="{{$s3Photo . auth()->user()->profile_photo_path}}"
                                  class="w-10 h-10 rounded mr-3">
                         @endif
-                            Perfil </h2>
+                        Perfil </h2>
 
                     <form class="mt-6 border-t border-gray-400 pt-4" wire:submit.prevent="updateProfile">
                         <div class='w-full md:w-full px-3 mb-6'>
@@ -73,10 +73,12 @@
                                 </label>
                             </div>
                             <div>
-                                @if ($photo)
-                                    <img src="{{ $photo->temporaryUrl() }}">
+                                @if(!$tempImage)
+                                    @if ($photo)
+                                        <img src="{{ $photo->temporaryUrl() }}">
+                                    @endif
+                                    @error('photo') <span class="error">{{ $message }}</span> @enderror
                                 @endif
-                                @error('photo') <span class="error">{{ $message }}</span> @enderror
                             </div>
 
                         </div>

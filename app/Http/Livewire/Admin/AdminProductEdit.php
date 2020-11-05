@@ -13,6 +13,7 @@ class AdminProductEdit extends Component
     public $price;
     public $unique_product;
     public $photo;
+    public $s3Photo = 'https://auroramarketplace.s3-sa-east-1.amazonaws.com/';
 
 
     public function mount($id)
@@ -43,6 +44,15 @@ class AdminProductEdit extends Component
            'description'  => $this->description,
            'price'=> $this->price,
            'unique_product' => $this->unique_product
+        ]);
+
+        $this->alert('success', 'Sucesso!', [
+            'position'  =>  'center',
+            'timer'  =>  5000,
+            'toast'  =>  false,
+            'text'  =>  'Seu produto foi atualizado!',
+            'showCancelButton'  =>  false,
+            'showConfirmButton'  =>  false
         ]);
     }
 }

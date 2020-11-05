@@ -7,9 +7,11 @@ use Livewire\Component;
 
 class Product extends Component
 {
+
     public $product;
     public $user;
     public $quantity = 1;
+    public $s3Photo = 'https://auroramarketplace.s3-sa-east-1.amazonaws.com/';
 
     public function mount(int $id)
     {
