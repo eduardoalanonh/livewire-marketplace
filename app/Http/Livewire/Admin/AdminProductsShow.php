@@ -12,6 +12,7 @@ class AdminProductsShow extends Component
     use WithPagination;
 
     public $s3Photo = 'https://auroramarketplace.s3-sa-east-1.amazonaws.com/';
+    public $firstImage;
 
     protected $listeners = [
         'productAdded' => '$refresh'
@@ -19,8 +20,9 @@ class AdminProductsShow extends Component
 
     public function render()
     {
+
         return view('livewire.admin.admin-products-show', [
-            'products' =>  auth()->user()->products()->orderBy('id', 'desc')->paginate(6),
+            'products' =>  auth()->user()->products()->orderBy('id', 'desc')->paginate(6)
         ]);
     }
 

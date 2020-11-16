@@ -17,7 +17,6 @@ class Product extends Component
     {
         $this->product = \App\Models\Product::find($id);
         $this->user = User::find($this->product->user_id);
-
     }
 
     public function render()

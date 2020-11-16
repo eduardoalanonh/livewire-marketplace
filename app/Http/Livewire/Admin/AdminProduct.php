@@ -65,9 +65,7 @@ class AdminProduct extends Component
             'image' => $imagePath
         ]);
 
-
         $this->name = $this->description = $this->price = $this->photo = '';
-
 
         $this->emit('productAdded');
 

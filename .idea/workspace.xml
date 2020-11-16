@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3dada9e8-2b15-4f83-b83e-14fa5ae4c6eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminProduct.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminProductEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminProductEdit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminProductsShow.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminProductsShow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/admin-product-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-product-edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/admin-products-show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-products-show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/product.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +210,11 @@
       <workItem from="1604353209513" duration="7520000" />
       <workItem from="1604444176969" duration="8035000" />
       <workItem from="1604534984655" duration="7524000" />
-      <workItem from="1604881809365" duration="5082000" />
+      <workItem from="1604881809365" duration="5110000" />
+      <workItem from="1604961532860" duration="5305000" />
+      <workItem from="1605235376467" duration="16000" />
+      <workItem from="1605393809504" duration="13000" />
+      <workItem from="1605484386700" duration="2767000" />
     </task>
     <servers />
   </component>
@@ -221,10 +230,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="259" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/1920.2.1920.1040@0.0.1920.1040" timestamp="1603162790231" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604882297502">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604963719688">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.2.1920.1040@0.0.1920.1040" timestamp="1604882297502" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.2.1920.1040@0.0.1920.1040" timestamp="1604963719688" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604455520320">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -38,11 +38,9 @@
                                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                         <div class="flex items-center">
                                             <div class="flex-shrink-0 w-10 h-10">
-                                                @foreach($product->photo as $photo)
                                                 <img class="w-full h-full rounded-full"
-                                                     src="{{$s3Photo .$photo->image}}"
-                                                     alt=""/>
-                                                @endforeach
+                                                     src="{{$s3Photo .$product->photo()->first()->image}}"
+                                                     alt="{{$product->name}}"/>
                                             </div>
                                             <div class="ml-3">
                                                 <p class="text-gray-900 whitespace-no-wrap">

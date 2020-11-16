@@ -71,17 +71,17 @@ class AdminProductEdit extends Component
                 'image' =>  $path,
             ]);
 
-       $this->alert('success', 'Suas fotos foram atualizadas', [
+       $this->alert('success', 'Sucesso!', [
             'position' => 'center',
             'timer' => 5000,
             'toast' => false,
-            'text' => 'Seu produto foi criado!',
+            'text' => 'Sua foto foi adicionada ao produto',
             'showCancelButton' => false,
             'showConfirmButton' => false
         ]);
 
        $this->photo = null;
 
+        $this->emit('updatePhotoProduct');
     }
-
 }
