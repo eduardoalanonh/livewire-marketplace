@@ -17,6 +17,8 @@ class AdminProduct extends Component
     public $price;
     public $unique_product;
     public $photo;
+    public $stock;
+    public $only_whatsapp;
 
     protected $rules = [
         'name' => 'required',
@@ -51,8 +53,10 @@ class AdminProduct extends Component
             'user_id' => auth()->user()->id,
             'name' => $this->name,
             'description' => $this->description,
-            'unique_product' => $this->unique_product ?? 0,
-            'price' => $this->price
+            'unique_product' => $this->unique_product ?? false,
+            'price' => $this->price,
+            'only_whatsapp' => $this->only_whatsapp ?? false,
+            'stock' => $this->stock,
         ]);
 
 
@@ -65,7 +69,7 @@ class AdminProduct extends Component
             'image' => $imagePath
         ]);
 
-        $this->name = $this->description = $this->price = $this->photo = '';
+        $this->name = $this->description = $this->price = $this->photo = $this->only_whatsapp = $this->unique_product = '';
 
         $this->emit('productAdded');
 

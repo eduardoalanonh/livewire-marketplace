@@ -19,6 +19,8 @@ class AdminProductEdit extends Component
     public $photo;
     public $s3Photo = 'https://auroramarketplace.s3-sa-east-1.amazonaws.com/';
     public $photos;
+    public $stock;
+    public $only_whatsapp;
 
 
     public function mount($id)
@@ -29,6 +31,8 @@ class AdminProductEdit extends Component
         $this->price = $this->product->price;
         $this->unique_product = $this->product->unique_product;
         $this->photos = $this->product->photo;
+        $this->only_whatsapp = $this->product->only_whatsapp;
+        $this->stock = $this->product->stock;
     }
 
 
@@ -48,7 +52,9 @@ class AdminProductEdit extends Component
             'name' => $this->name,
             'description' => $this->description,
             'price' => $this->price,
-            'unique_product' => $this->unique_product
+            'unique_product' => $this->unique_product,
+            'only_whatsapp' => $this->only_whatsapp,
+            'stock' => $this->stock,
         ]);
 
         $this->alert('success', 'Sucesso!', [

@@ -38,7 +38,7 @@
                             <div>
                                 <img class="image{{$key}} description h-24 opacity-50 hover:opacity-100 cursor-pointer"
                                      src="#"
-                                     onclick="currentSlide(1)" alt="Dog's Nose">
+                                     onclick="currentSlide({{$key}})" alt="{{$product->name}}">
                             </div>
                         @endforeach
                     </div>
@@ -90,10 +90,12 @@
                 <div class="flex mt-5">
 
                     <span class="title-font font-medium text-2xl text-gray-900">R$ {{$product->price}}</span>
+                    @if(!$product->only_whatsapp)
                     <button
                         class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
                         Comprar no cartao
                     </button>
+                    @endif
 
                 </div>
                 <div class="mt-5 bg-gray-100 p-3 rounded">

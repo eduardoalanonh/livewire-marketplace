@@ -20,6 +20,8 @@ class CreateProductsTable extends Migration
             $table->string('description');
             $table->decimal('price',10,2);
             $table->boolean('unique_product');
+            $table->boolean('only_whatsapp');
+            $table->integer('stock')->nullable();
             $table->softDeletes();
             $table->timestamps();
 

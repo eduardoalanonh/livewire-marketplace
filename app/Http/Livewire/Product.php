@@ -10,7 +10,6 @@ class Product extends Component
 
     public $product;
     public $user;
-    public $quantity = 1;
     public $s3Photo = 'https://auroramarketplace.s3-sa-east-1.amazonaws.com/';
 
     public function mount(int $id)
@@ -26,16 +25,4 @@ class Product extends Component
             ->section('content');
     }
 
-    public function upQuantity()
-    {
-        $this->quantity += 1;
-    }
-
-    public function downQuantity()
-    {
-        $this->quantity -= 1;
-        if ($this->quantity <= 0) {
-            $this->quantity = 1;
-        }
-    }
 }

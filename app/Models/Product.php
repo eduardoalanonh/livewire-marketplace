@@ -14,7 +14,9 @@ class Product extends Model
         'description',
         'price',
         'user_id',
-        'unique_product'
+        'unique_product',
+        'only_whatsapp',
+        'stock'
     ];
 
     public function user()

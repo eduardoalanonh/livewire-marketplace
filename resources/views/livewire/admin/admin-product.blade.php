@@ -34,11 +34,28 @@
                             @error('price') <span class="error">{{ $message }}</span> @enderror
                         </div>
                         <div class='w-full md:w-full px-3 mb-6'>
+
+                            <label class="inline-flex items-center mt-3">
+                                <input wire:model="only_whatsapp" type="checkbox"
+                                       class="form-checkbox h-5 w-5 text-gray-600" checked><span
+                                    class="ml-2 text-gray-700">Venda apenas pelo whatsapp</span>
+                            </label>
+
                             <label class="inline-flex items-center mt-3">
                                 <input wire:model="unique_product" type="checkbox"
                                        class="form-checkbox h-5 w-5 text-gray-600" checked><span
-                                    class="ml-2 text-gray-700">Marque esse campo se vai ser um produto unico</span>
+                                    class="ml-2 text-gray-700">Marque esse campo se vai ser um produto unico ou tem uma quantidade em estoque limitada</span>
                             </label>
+                            @if($unique_product)
+                                <div class="mt-2">
+                                <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
+                                   Digite quantos tem em estoque</label>
+                                <input
+                                    wire:model="stock"
+                                    class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500'
+                                    type='text'>
+                                </div>
+                            @endif
                         </div>
 
 
