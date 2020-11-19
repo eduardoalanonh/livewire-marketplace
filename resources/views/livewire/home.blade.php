@@ -1,7 +1,7 @@
 <section class="bg-white py-8">
     <div class="container mx-auto flex flex-wrap pt-4 pb-12">
         <input wire:model="search"
-               class="w-full rounded-full py-3 px-6 border border-black border-opacity-25 rounded shadow-lg  bg-gray-100 text-center text-black transition duration-500 ease-in-out   transform hover:-translate-y-1 hover:scale-105"
+               class="w-full mx-7 rounded-full py-3 px-2 border border-black border-opacity-25 rounded shadow-lg  bg-gray-100 text-center text-black transition duration-500 ease-in-out   transform hover:-translate-y-1 hover:scale-105"
                type="search" placeholder="Buscar produtos e servicos">
 
         @if(count($products))
@@ -44,8 +44,7 @@
                 <div class="px-3 md:px-0">
                     <h3 class="font-bold text-gray-900">Sobre</h3>
                     <p class="py-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis tempus commodo
-                        nec id erat. Suspendisse consectetur dapibus velit ut lacinia.
+                        Nós conectamos pessoas para que elas possam comprar e vender de forma fácil e rápida, mas não participamos ou interferimos de qualquer forma nas negociações.
                     </p>
                 </div>
             </div>

@@ -1,4 +1,3 @@
-
 <div class="container w-full mx-auto pt-20">
 
     <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
@@ -7,7 +6,18 @@
 
         <div class="flex flex-wrap">
             <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                <!--Metric Card-->
+                <!--Toast-->
+                @if(!$user->address->phone)
+                    <div class="alert-toast fixed bottom-0 right-0 m-8 w-5/6 md:w-full max-w-sm">
+                        <label
+                            class="close cursor-pointer flex items-start justify-between w-full p-2 bg-red-700 h-24 rounded shadow-lg text-white"
+                            title="close" for="footertoast">
+                            Preencha seu endereco na aba do perfil, para anunciar produtos e obrigatorio ter bloco,
+                            apartamento e telefone preenchidos.
+                        </label>
+                    </div>
+            @endif
+            <!--Metric Card-->
                 <div class="bg-white border rounded shadow p-2">
                     <div class="flex flex-row items-center">
                         <div class="flex-shrink pr-4">
